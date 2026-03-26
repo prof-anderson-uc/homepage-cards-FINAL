@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  line-height: 1.4;
+  color: #222222;
+}
+
+/* HEADER STYLES
+   ========================= */
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  padding: 0.75rem 1rem; /* space inside the header */
+  display: flex; /* puts site title and nav side by side */
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* space between flex items */
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1d3557;
+}
+
+nav ul {
+  list-style: none; /* removes bullet points */
+  display: flex; /* puts list items in a row */
+  gap: 1.5rem; /* space between links */
+}
+
+nav a {
+  text-decoration: none; /* removes link underlines */
+  color: #1d3557;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #457b9d; /* color when hovering */
+}
+
+/* MAIN CONTENT SECTION
+   ========================= */
+
+.content-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto; /* centers horizontally */
+  padding: 2rem 0;
+  font-size: 1.15rem;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  color: #1d3557;
+  margin-bottom: 0.75rem;
+}
+
+.content-section p {
+  margin-bottom: 1rem;
+}
+
+/* FEATURE CARD SECTION
+   ========================= */
+
+.card-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem 0;
+}
+
+.card-section h2 {
+  font-size: 2rem;
+  color: #1d3557;
+  margin-bottom: 1rem;
+}
+
+/* CSS Grid places the cards into columns */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #f1f5f9;
+  border: 1px solid #d9e2ec;
+  border-radius: 1rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #1d3557;
+  margin: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* CALL TO ACTION SECTION
+   ========================= */
+
+.cta-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  padding: 2rem;
+  background-color: #1d3557;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta-section p {
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #e63946;
+  color: #ffffff;
+  text-decoration: none; /* removes link underline */
+  font-weight: bold;
+  padding: 0.9rem 1.4rem; /* space inside button */
+  border-radius: 0.75rem; /* rounds corners */
+}
+
+.cta-button:hover {
+  background-color: #c92f3b; /* color when hovering */
+}
+
+/* FOOTER
+   ========================= */
+
+footer {
+  font-size: 80%;
+  background-color: #1d3557;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* RESPONSIVE STYLES
+   ========================= */
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .content-section h2,
+  .card-section h2,
+  .cta-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    padding: 1.5rem;
+  }
+}
